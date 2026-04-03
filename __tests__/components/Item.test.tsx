@@ -5,6 +5,7 @@ import type { ItemProps } from "@/types/props";
 import Item from "@/components/Item/Item";
 
 type RenderComponent = {
+  container: HTMLElement;
   props: ItemProps;
 };
 
@@ -16,9 +17,9 @@ const renderComponent = (overrides?: Partial<ItemProps>): RenderComponent => {
     ...overrides,
   };
 
-  render(<Item {...props} />);
+  const { container } = render(<Item {...props} />);
 
-  return { props };
+  return { container, props };
 };
 
 describe("Item", () => {
