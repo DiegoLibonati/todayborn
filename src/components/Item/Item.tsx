@@ -1,8 +1,9 @@
-import { ItemProps } from "@/types/props";
+import type { JSX } from "react";
+import type { ItemProps } from "@/types/props";
 
 import "@/components/Item/Item.css";
 
-const Item = ({ age, image, name }: ItemProps) => {
+const Item = ({ age, image, name }: ItemProps): JSX.Element => {
   return (
     <li className="person" aria-label={`${name}, ${age} years old`}>
       <img src={image} alt={`Profile photo of ${name}`} className="person__img" />

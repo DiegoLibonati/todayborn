@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Birthday } from "@/types/app";
+import type { JSX } from "react";
 
 import Item from "@/components/Item/Item";
 
@@ -8,8 +8,8 @@ import arrBirthdays from "@/constants/birthdays";
 
 import "@/pages/BirthdaysPage/BirthdaysPage.css";
 
-const BirthdaysPage = () => {
-  const [birthdays, setBirthdays] = useState<Birthday[]>(arrBirthdays);
+const BirthdaysPage = (): JSX.Element => {
+  const [birthdays, setBirthdays] = useState(arrBirthdays);
 
   const handleClear: React.MouseEventHandler<HTMLButtonElement> = () => {
     setBirthdays([]);

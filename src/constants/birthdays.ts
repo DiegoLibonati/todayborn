@@ -1,4 +1,4 @@
-import { Birthday } from "@/types/app";
+import type { Birthday } from "@/types/app";
 
 const birthdays: Birthday[] = [
   {

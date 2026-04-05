@@ -1,6 +1,8 @@
+import type { JSX } from "react";
+
 import BirthdaysPage from "@/pages/BirthdaysPage/BirthdaysPage";
 
-function App() {
+function App(): JSX.Element {
   return <BirthdaysPage></BirthdaysPage>;
 }
 

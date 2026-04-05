@@ -4,10 +4,10 @@ import type { ItemProps } from "@/types/props";
 
 import Item from "@/components/Item/Item";
 
-type RenderComponent = {
+interface RenderComponent {
   container: HTMLElement;
   props: ItemProps;
-};
+}
 
 const renderComponent = (overrides?: Partial<ItemProps>): RenderComponent => {
   const props: ItemProps = {

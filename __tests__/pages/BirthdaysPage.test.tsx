@@ -5,7 +5,11 @@ import { mockBirthdays } from "@tests/__mocks__/birthdays.mock";
 
 import BirthdaysPage from "@/pages/BirthdaysPage/BirthdaysPage";
 
-const renderPage = () => {
+interface RenderPage {
+  container: HTMLElement;
+}
+
+const renderPage = (): RenderPage => {
   const { container } = render(<BirthdaysPage />);
   return { container };
 };
