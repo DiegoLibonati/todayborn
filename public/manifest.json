@@ -1,7 +1,7 @@
 {
-  "name": "Birthdays",
-  "short_name": "Birthdays",
-  "description": "I made a web application that allows you to see today's birthdays, and how old they are. There is also a button that allows you to clear the active birthdays.",
+  "name": "Todayborn",
+  "short_name": "Todayborn",
+  "description": "Todayborn is a lightweight web application that displays a curated list of people celebrating their birthday today, along with their profile photo, full name, and current age. The interface renders each person as a card in a clean, accessible list, making it easy to glance at who is turning a year older on any given day.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

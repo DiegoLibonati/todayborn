@@ -1,4 +1,4 @@
-.birthdays-page {
+.todayborn-page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,17 +10,17 @@
   border-radius: 0.625rem;
 }
 
-.birthdays-page__title {
+.todayborn-page__title {
   font-size: 1.25rem;
   width: 90%;
   padding: 0.625rem;
 }
 
-.birthdays-page__list {
+.todayborn-page__list {
   width: 100%;
 }
 
-.birthdays-page__clear-all {
+.todayborn-page__clear-all {
   padding: 0.625rem;
   width: 90%;
   font-size: 0.9375rem;

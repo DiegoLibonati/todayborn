@@ -1,9 +1,9 @@
 import type { JSX } from "react";
 
-import BirthdaysPage from "@/pages/BirthdaysPage/BirthdaysPage";
+import TodaybornPage from "@/pages/TodaybornPage/TodaybornPage";
 
 function App(): JSX.Element {
-  return <BirthdaysPage></BirthdaysPage>;
+  return <TodaybornPage></TodaybornPage>;
 }
 
 export default App;

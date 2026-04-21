@@ -6,9 +6,9 @@ import Item from "@/components/Item/Item";
 
 import arrBirthdays from "@/constants/birthdays";
 
-import "@/pages/BirthdaysPage/BirthdaysPage.css";
+import "@/pages/TodaybornPage/TodaybornPage.css";
 
-const BirthdaysPage = (): JSX.Element => {
+const TodaybornPage = (): JSX.Element => {
   const [birthdays, setBirthdays] = useState(arrBirthdays);
 
   const handleClear: React.MouseEventHandler<HTMLButtonElement> = () => {
@@ -16,10 +16,10 @@ const BirthdaysPage = (): JSX.Element => {
   };
 
   return (
-    <main className="birthdays-page" aria-label="Today's birthdays">
-      <h2 className="birthdays-page__title">{birthdays.length} birthdays today</h2>
+    <main className="todayborn-page" aria-label="Today's birthdays">
+      <h2 className="todayborn-page__title">{birthdays.length} birthdays today</h2>
 
-      <ul className="birthdays-page__list" aria-label="Birthday list">
+      <ul className="todayborn-page__list" aria-label="Birthday list">
         {birthdays.map((birthday) => (
           <Item
             key={birthday.id}
@@ -32,7 +32,7 @@ const BirthdaysPage = (): JSX.Element => {
 
       <button
         onClick={handleClear}
-        className="birthdays-page__clear-all"
+        className="todayborn-page__clear-all"
         aria-label="Clear all birthdays from the list"
       >
         Clear ALL
@@ -41,4 +41,4 @@ const BirthdaysPage = (): JSX.Element => {
   );
 };
 
-export default BirthdaysPage;
+export default TodaybornPage;

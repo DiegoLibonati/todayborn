@@ -1,4 +1,4 @@
-# Birthday React
+# Todayborn
 
 ## Educational Purpose
 
@@ -17,7 +17,11 @@ The application will open automatically at `http://localhost:3000`
 
 ## Description
 
-I made a web application that allows you to see today's birthdays, and how old they are. There is also a button that allows you to clear the active birthdays.
+**Todayborn** is a lightweight web application that displays a curated list of people celebrating their birthday today, along with their profile photo, full name, and current age. The interface renders each person as a card in a clean, accessible list, making it easy to glance at who is turning a year older on any given day.
+
+The page loads with a pre-defined set of birthday entries and shows the total count at the top so the user always knows at a glance how many birthdays are active. A single "Clear ALL" button lets the user dismiss the entire list at once, resetting the view to an empty state — useful when the information has already been acknowledged and the screen needs to be cleared.
+
+The application is fully static: there is no backend, no database, and no authentication. All birthday data lives in a constants file, making it straightforward to extend or replace the seed data with a dynamic data source in the future. The UI is built with accessibility in mind — each birthday card exposes a descriptive `aria-label` combining the person's name and age, and profile images include meaningful alt text, so the content is usable with assistive technologies.
 
 ## Technologies used
 
@@ -67,11 +71,7 @@ I made a web application that allows you to see today's birthdays, and how old t
 
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/Birthday-React`](https://www.diegolibonati.com.ar/#/project/Birthday-React)
-
-## Video
-
-https://github.com/DiegoLibonati/Birthday-App-Page/assets/99032604/fbdd0fc6-3ee9-4624-9d71-9fc706e8042f
+[`https://www.diegolibonati.com.ar/#/project/todayborn`](https://www.diegolibonati.com.ar/#/project/todayborn)
 
 ## Testing
 
