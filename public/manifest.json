@@ -1,7 +1,7 @@
 {
   "name": "Todayborn",
   "short_name": "Todayborn",
-  "description": "Todayborn is a lightweight web application that displays a curated list of people celebrating their birthday today, along with their profile photo, full name, and current age. The interface renders each person as a card in a clean, accessible list, making it easy to glance at who is turning a year older on any given day.",
+  "description": "Todayborn is a lightweight web application that displays a curated list of people celebrating their birthday today, along with their profile photo, full name, and current age.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
