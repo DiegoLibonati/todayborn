@@ -53,7 +53,7 @@ describe("Item", () => {
 
     it("should mark the description container as aria-hidden", () => {
       const { container } = renderComponent();
-      const description = container.querySelector(".person__description");
+      const description = container.querySelector<HTMLDivElement>(".person__description");
       expect(description).toHaveAttribute("aria-hidden", "true");
     });
   });
