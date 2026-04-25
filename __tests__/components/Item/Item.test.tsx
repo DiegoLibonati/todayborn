@@ -66,7 +66,7 @@ describe("Item", () => {
 
     it("should have an accessible image description tied to the person name", () => {
       renderComponent({ name: "Diana" });
-      expect(screen.getByAltText("Profile photo of Diana")).toBeInTheDocument();
+      expect(screen.getByRole("img", { name: "Profile photo of Diana" })).toBeInTheDocument();
     });
   });
 });
