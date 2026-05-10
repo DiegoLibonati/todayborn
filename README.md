@@ -6,15 +6,6 @@ This project was created primarily for **educational and learning purposes**.
 While it is well-structured and could technically be used in production, it is **not intended for commercialization**.  
 The main goal is to explore and demonstrate best practices, patterns, and technologies in software development.
 
-## Getting Started
-
-1. Clone the repository
-2. Navigate to the project folder
-3. Execute: `npm install`
-4. Execute: `npm run dev`
-
-The application will open automatically at `http://localhost:3000`
-
 ## Description
 
 **Todayborn** is a lightweight web application that displays a curated list of people celebrating their birthday today, along with their profile photo, full name, and current age. The interface renders each person as a card in a clean, accessible list, making it easy to glance at who is turning a year older on any given day.
@@ -70,11 +61,20 @@ The application is fully static: there is no backend, no database, and no authen
 "vite": "^7.1.6"
 ```
 
-## Portfolio Link
+## Getting Started
 
-[`https://www.diegolibonati.com.ar/#/project/todayborn`](https://www.diegolibonati.com.ar/#/project/todayborn)
+With the stack above installed, follow these steps to run the app locally:
+
+1. Clone the repository
+2. Navigate to the project folder
+3. Execute: `npm install`
+4. Execute: `npm run dev`
+
+The application will open automatically at `http://localhost:3000`.
 
 ## Testing
+
+Once the app is running, you can verify its behavior with the test suite:
 
 1. Navigate to the project folder
 2. Execute: `npm test`
@@ -85,7 +85,9 @@ For coverage report:
 npm run test:coverage
 ```
 
-## Security
+## Security Audit
+
+Beyond functional tests, the project ships with tooling to audit dependencies and overall code health.
 
 ### npm audit
 
@@ -112,3 +114,7 @@ npm run doctor -- --verbose
 ## Known Issues
 
 None at the moment.
+
+## Portfolio Link
+
+[`https://www.diegolibonati.com.ar/#/project/todayborn`](https://www.diegolibonati.com.ar/#/project/todayborn)
