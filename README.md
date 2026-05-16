@@ -86,6 +86,52 @@ For coverage report:
 npm run test:coverage
 ```
 
+## Continuous Integration
+
+The repository ships with a **GitHub Actions** pipeline defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml). It runs automatically on every `push` and `pull_request` targeting the `main` branch.
+
+[![CI](https://github.com/DiegoLibonati/Birthday-React/actions/workflows/ci.yml/badge.svg)](https://github.com/DiegoLibonati/Birthday-React/actions/workflows/ci.yml)
+
+### Pipeline overview
+
+```
+                ┌─── PR or push to main ───┐
+                ▼                          ▼
+┌──────────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+│    lint-and-audit    │─▶│      testing     │─▶│       build      │
+│  eslint · tsc check  │  │   jest (jsdom)   │  │ tsc + vite build │
+└──────────────────────┘  └──────────────────┘  └──────────────────┘
+```
+
+### Validation jobs (run on every PR and push to `main`)
+
+1. **`lint-and-audit`** — installs dependencies with `npm ci`, then runs `npm run lint` (ESLint over `src`) and `npm run type-check` (TypeScript `--noEmit` against `tsconfig.app.json`).
+2. **`testing`** — runs the full Jest suite headlessly via `npm test` against the jsdom environment. Requires `lint-and-audit` to pass first.
+3. **`build`** — runs `npm run build`, which performs the TypeScript build and produces the Vite production bundle under `dist/`. Requires `testing` to pass first.
+
+All jobs run on `ubuntu-latest` and share the Node version declared in [`.nvmrc`](.nvmrc) with the npm cache enabled via `actions/setup-node`.
+
+### Where the build outputs live
+
+| Output                                           | Location                                                    |
+| ------------------------------------------------ | ----------------------------------------------------------- |
+| Validation logs (lint, type-check, tests, build) | **Actions** tab on GitHub                                   |
+| Production bundle (`dist/`)                      | Ephemeral, inside the runner — not published as an artifact |
+
+### Running the same checks locally
+
+```bash
+# lint-and-audit
+npm run lint
+npm run type-check
+
+# testing
+npm test
+
+# build
+npm run build
+```
+
 ## Security Audit
 
 Beyond functional tests, the project ships with tooling to audit dependencies and overall code health.
@@ -111,8 +157,6 @@ Use `--verbose` to see specific files and line numbers:
 ```bash
 npm run doctor -- --verbose
 ```
-
-[![CI](https://github.com/DiegoLibonati/Birthday-React/actions/workflows/ci.yml/badge.svg)](https://github.com/DiegoLibonati/Birthday-React/actions/workflows/ci.yml)
 
 ## Known Issues
 
