@@ -65,10 +65,11 @@ The application is fully static: there is no backend, no database, and no authen
 
 With the stack above installed, follow these steps to run the app locally:
 
-1. Clone the repository
-2. Navigate to the project folder
-3. Execute: `npm install`
-4. Execute: `npm run dev`
+1. Ensure you have Node.js 22 installed (see `.nvmrc`)
+2. Clone the repository
+3. Navigate to the project folder
+4. Execute: `npm install`
+5. Execute: `npm run dev`
 
 The application will open automatically at `http://localhost:3000`.
 
@@ -110,6 +111,8 @@ Use `--verbose` to see specific files and line numbers:
 ```bash
 npm run doctor -- --verbose
 ```
+
+[![CI](https://github.com/DiegoLibonati/Birthday-React/actions/workflows/ci.yml/badge.svg)](https://github.com/DiegoLibonati/Birthday-React/actions/workflows/ci.yml)
 
 ## Known Issues
 
